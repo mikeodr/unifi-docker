@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+<Category>Utilities:</Category>
+  <Name>Unifi Controller</Name>
+  <Overview>
+    Unifi AP Controller
+  </Overview>
+  <Description>
+  </Description>
+  <Registry>https://hub.docker.com/r/mikeodr/unifi-docker/</Registry>
+  <GitHub>https://github.com/mikeodr/unifi-docker</GitHub>
+  <Repository>mikeodr/unifi-docker</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8880</HostPort>
+        <ContainerPort>8880</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27117</HostPort>
+        <ContainerPort>27117</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10001</HostPort>
+        <ContainerPort>10001</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unifi</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Banner>http://i.imgur.com/aojehxJ.png</Banner>
+  <Icon>http://i.imgur.com/7NwS6KP.jpg</Icon>
+</Container>
