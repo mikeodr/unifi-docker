@@ -53,7 +53,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/unifi</HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <ContainerDir>/usr/lib/unifi/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
