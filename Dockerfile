@@ -6,6 +6,7 @@ ENV HOME /root
 
 CMD ["/sbin/my_init"]
 
+# Add unifi repo
 RUN echo > /etc/apt/sources.list.d/ubnt.list '\n\
 ## Debian/Ubuntu\n\
 # stable => unifi4\n\
@@ -13,6 +14,7 @@ RUN echo > /etc/apt/sources.list.d/ubnt.list '\n\
 deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti\n\
 \n'
 
+# Add Key for unifi
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv C0A52C50
 
 RUN apt-get update -qq && \
